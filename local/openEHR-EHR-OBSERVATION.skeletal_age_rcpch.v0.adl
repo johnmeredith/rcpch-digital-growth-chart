@@ -52,7 +52,7 @@ The skeletal age can be determined by several different methods including but no
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0416fe1b6b00272f3ccba2566c927585">
+		["MD5-CAM-1.0.1"] = <"a7c4fbfb0c1ff7cb77231378753eda58">
 		["build_uid"] = <"a822e12b-acdb-4d58-ba48-f03745d9ff83">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -284,11 +284,11 @@ Specialised for use with the RCPCH in the UK.">
 				>
 				["at0032"] = <
 					text = <"Centile">
-					description = <"">
+					description = <"Bone age centile.">
 				>
 				["at0034"] = <
 					text = <"Standard deviation score (SDS)">
-					description = <"">
+					description = <"Standard deviation score (SDS) of bone age measurment.">
 				>
 			>
 		>
