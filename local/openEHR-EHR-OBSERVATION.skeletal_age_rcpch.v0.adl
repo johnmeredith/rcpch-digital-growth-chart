@@ -30,7 +30,7 @@ description
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere et estimat av biologisk alder ved å vurdere graden av modning av skjelettet.">
-			keywords = <"bein","skjelett">
+			keywords = <"*bone (en)","*skeleton (en)">
 			use = <"Brukes for å registrere et estimat av biologisk alder ved å vurdere graden av modning av skjelettet.
 
 Skjelettalder kan fastlås gjennom flere ulike metoder. For eksempel: Røntgen av håndrot, nakkevirvler, pannebihuler eller ******">
@@ -52,13 +52,13 @@ The skeletal age can be determined by several different methods including but no
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8bf08ab7d6751163abb8cae491be9450">
+		["MD5-CAM-1.0.1"] = <"0416fe1b6b00272f3ccba2566c927585">
 		["build_uid"] = <"a822e12b-acdb-4d58-ba48-f03745d9ff83">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- skeletal_age_rcpch
+	OBSERVATION[at0000] matches {    -- Skeletal age (RCPCH)
 		data matches {
 			HISTORY[at0001] matches {    -- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -76,6 +76,26 @@ definition
 									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Comment
 										value matches {
 											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0032] occurrences matches {0..1} matches {    -- Centile
+										value matches {
+											DV_PROPORTION matches {
+												type matches {2}
+											}
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Standard deviation score (SDS)
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+														precision = <|1|>
+													>
+												>
+											>
 										}
 									}
 								}
@@ -154,8 +174,10 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"skeletal_age_rcpch">
-					description = <"An estimate of biological age by assessing the degree of maturation of an individual's bones.">
+					text = <"Skeletal age (RCPCH)">
+					description = <"An estimate of biological age by assessing the degree of maturation of an individual's bones.
+
+Specialised for use with the RCPCH in the UK.">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -260,13 +282,23 @@ ontology
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
 				>
+				["at0032"] = <
+					text = <"Centile">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Standard deviation score (SDS)">
+					description = <"">
+				>
 			>
 		>
 		["nb"] = <
 			items = <
 				["at0000"] = <
-					text = <"skeletal_age_rcpch">
-					description = <"Et estimat av biologisk alder ved å vurdere graden av modning av skjelettet.">
+					text = <"*Skeletal age (RCPCH) (en)">
+					description = <"*An estimate of biological age by assessing the degree of maturation of an individual's bones.
+
+Specialised for use with the RCPCH in the UK. (en)">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -370,6 +402,14 @@ ontology
 					text = <"Tilleggsinformasjon">
 					description = <"Ytterligere informasjon som er nødvendig for å registrere lokalt innhold/kontekst, eller for å sammenstille med andre referansemodeller/formalismer.">
 					comment = <"F.eks lokale informasjonskrav eller ekstra metadata for å tilpasse med FHIR eller CIMI ekvivalenter.">
+				>
+				["at0032"] = <
+					text = <"*Centile (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Standard deviation score (SDS) (en)">
+					description = <"">
 				>
 			>
 		>
