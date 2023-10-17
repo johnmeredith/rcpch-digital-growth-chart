@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.20",
+      "sem_ver" : "0.1.21",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "3afdea3b0030a24dd90028945db176a3",
+      "MD5-CAM-1.0.1" : "97e31682f85c71acbdd3395a15c3cbbf",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -225,19 +225,19 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "SECTION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.0.4",
+        "nodeId" : "at0.0.7",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1",
+        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-003.v1",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "SECTION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.0.6",
+        "nodeId" : "at0.0.4",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-003.v1",
+        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -1182,6 +1182,38 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0004.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DURATION",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_DURATION",
+                  "rmTypeName" : "DURATION",
+                  "occurrences" : "1..1",
+                  "patternedConstraint" : "PWD",
+                  "constraint" : [ {
+                    "lower" : "P0W",
+                    "upper" : "P52W",
+                    "lowerIncluded" : true,
+                    "upperIncluded" : true,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : false
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0005.1",
           "attributes" : [ {
@@ -1267,6 +1299,13 @@
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Gestation",
+            "description" : "The length of the pregnancy at the time of delivery of the infant.",
+            "comment" : "The value for this data element will usually, but not always, be identical to the 'Pregnancy duration' data element within the EVALUATION.pregnancy_summary in the maternal record. It may also be derived using the 'Agreed date' data element within the EVALUATION.estimated_date_delivery archetype in the maternal record. Usually estimated by Naegele's rule or by ultrasound scan."
           }
         }
       },
@@ -2690,7 +2729,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Observation data",
+            "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
+          }
+        },
         "ru" : {
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -3140,7 +3186,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.13" ],
+                              "constraint" : [ "ac0.14" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -3284,7 +3330,7 @@
           "at0011.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0011.1",
-            "text" : "SDI",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -3314,8 +3360,8 @@
           },
           "at0011.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011.1",
-            "text" : "SDI",
+            "code" : "at0011.2",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -3325,10 +3371,10 @@
             "code" : "ac0.9",
             "description" : ""
           },
-          "ac0.13" : {
+          "ac0.14" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.13",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -3339,10 +3385,10 @@
             "code" : "ac0.9",
             "description" : ""
           },
-          "ac0.13" : {
+          "ac0.14" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.13",
+            "code" : "ac0.14",
             "description" : ""
           }
         }
@@ -3414,6 +3460,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.13",
           "members" : [ "at0020", "at0023" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0020" ]
         }
       }
     },
@@ -3524,7 +3575,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.10" ],
+                              "constraint" : [ "ac0.18" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -3810,7 +3861,7 @@
           "at0011.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0011.1",
-            "text" : "SDI",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -3840,35 +3891,35 @@
           },
           "at0011.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011.1",
-            "text" : "SDI",
+            "code" : "at0011.2",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
-          },
-          "ac0.10" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.10",
-            "description" : ""
           },
           "ac0.16" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
         "sl" : {
-          "ac0.10" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.10",
-            "description" : ""
-          },
           "ac0.16" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.16",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         }
@@ -3954,6 +4005,16 @@
         "ac0.16" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.16",
+          "members" : [ "at0023" ]
+        },
+        "ac0.17" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.17",
+          "members" : [ "at0020", "at0023" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
           "members" : [ "at0023" ]
         }
       }
@@ -4351,7 +4412,7 @@
           "at0011.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0011.1",
-            "text" : "SDI",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -4381,8 +4442,8 @@
           },
           "at0011.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011.1",
-            "text" : "SDI",
+            "code" : "at0011.2",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -4877,7 +4938,7 @@
           "at0011.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0011.1",
-            "text" : "SDI",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -4907,8 +4968,8 @@
           },
           "at0011.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011.1",
-            "text" : "SDI",
+            "code" : "at0011.2",
+            "text" : "SDS",
             "description" : "The deviation of an individual's value from the median value for a reference population, divided by the standard deviation of the reference population.",
             "comment" : "Also known as the Standard deviation score (SD)."
           },
@@ -6086,7 +6147,37 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "DC3170C3E873B139C3C004F67A0469FD"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Altersparameter einer Person.",
+          "keywords" : [ "Alter", "Lebensalter" ],
+          "use" : "Zur Darstellung der Altersparameter einer Person.\r\n\r\nDiesen Archetypen zusammen mit dem OBSERVATION.child_growth Archetypen im Template verwenden, um das korrigierte Alter eines Säuglings im Rahmen der Überwachung des Kinderwachstums darzustellen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record parameters about the age of an individual.",
+          "keywords" : [ ],
+          "use" : "Use to record parameters about the age of an individual.\r\n\r\nUse to in a template alongside OBSERVATION.child_growth to record the adjusted age of an infant as part of monitoring child growth patterns.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.age.v0",
     "differential" : true,
