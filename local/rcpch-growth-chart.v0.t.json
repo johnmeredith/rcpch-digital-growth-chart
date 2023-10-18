@@ -4,9 +4,12 @@
   "description" : {
     "@type" : "RESOURCE_DESCRIPTION",
     "originalAuthor" : {
-      "date" : "2023-06-06"
+      "date" : "2023-06-06",
+      "name" : "John Meredith",
+      "organisation" : "Digital Health and Care Wales (DHCW) / openEHR International",
+      "email" : "john.meredith@openehr.org"
     },
-    "otherContributors" : [ ],
+    "otherContributors" : [ "Dr Ian McNicoll", "Dr Marcus Baw" ],
     "lifecycleState" : {
       "codeString" : "in_development"
     },
@@ -19,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.25",
+      "sem_ver" : "0.1.26",
       "build_uid" : "",
       "MD5-CAM-1.0.1" : "b24a7051ed4700835485aa4bc2153709",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
@@ -117,8 +120,9 @@
           },
           "codeString" : "en"
         },
-        "purpose" : "To ...\n",
+        "purpose" : "To record calculations for use in a child growth chart. The data points align to the Royal College of Paediatrics and Child Health API. \n",
         "keywords" : [ "RCPCH, growth, centile, chart, Turner, Trisomy-21" ],
+        "use" : "For use in capturing output from the RCPCH Growth Chart calculation API. Will take into account Height calculations aligned to UK-WHO, Turner Syndrome and Trisomy-21. ",
         "originalResourceUri" : { },
         "otherDetails" : { }
       },
