@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.27",
+      "sem_ver" : "0.1.28",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b24a7051ed4700835485aa4bc2153709",
+      "MD5-CAM-1.0.1" : "25a01bf96587bc2fece98d6f6322a6f3",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -4443,7 +4443,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Chart results",
+            "text" : "Calculation results",
             "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
           }
         },
@@ -4690,7 +4690,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Chart results",
+            "text" : "Calculation results",
             "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
           }
         },
@@ -4958,7 +4958,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Chart results",
+            "text" : "Calculation results",
             "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
           }
         },
@@ -5205,7 +5205,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Chart results",
+            "text" : "Calculation results",
             "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
           }
         },
