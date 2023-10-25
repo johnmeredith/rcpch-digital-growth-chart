@@ -52,7 +52,7 @@ The skeletal age can be determined by several different methods including but no
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c8a85d5ea8bacc0f70c44b3ca7c71ac8">
+		["MD5-CAM-1.0.1"] = <"507649ebbc9a4d18a004ef4f070f5fa6">
 		["build_uid"] = <"a822e12b-acdb-4d58-ba48-f03745d9ff83">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -186,7 +186,7 @@ ontology
 					text = <"Skeletal age (RCPCH)">
 					description = <"An estimate of biological age by assessing the degree of maturation of an individual's bones.
 
-Specialised for use with the RCPCH in the UK.">
+Specialised for use with the RCPCH in the UK to include additional elements.">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -307,7 +307,7 @@ Specialised for use with the RCPCH in the UK.">
 					text = <"*Skeletal age (RCPCH) (en)">
 					description = <"*An estimate of biological age by assessing the degree of maturation of an individual's bones.
 
-Specialised for use with the RCPCH in the UK. (en)">
+Specialised for use with the RCPCH in the UK to include additional elements. (en)">
 				>
 				["at0001"] = <
 					text = <"Event Series">
