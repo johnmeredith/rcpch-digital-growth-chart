@@ -61,7 +61,7 @@ World Health Organiation [Internet]. Geneva: World Health Organization.The WHO C
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1791b142fff1e65be282a1180c573ce4">
+		["MD5-CAM-1.0.1"] = <"14a5692ff00e8909be916beddd67d8d8">
 		["build_uid"] = <"6cfa0c11-888c-48d7-a2f8-d9072d3b646b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -274,7 +274,7 @@ ontology
 				>
 				["at0042"] = <
 					text = <"Reference">
-					description = <"Indicator calculation reference e.g. WHO, Down's Syndrome or Turner Syndrome.">
+					description = <"Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome.">
 				>
 			>
 		>
@@ -392,7 +392,7 @@ ontology
 				>
 				["at0042"] = <
 					text = <"*Reference (en)">
-					description = <"*Indicator calculation reference e.g. WHO, Down's Syndrome or Turner Syndrome. (en)">
+					description = <"*Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome. (en)">
 				>
 			>
 		>
