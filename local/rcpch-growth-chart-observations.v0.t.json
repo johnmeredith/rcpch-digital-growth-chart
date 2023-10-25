@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.2",
+      "sem_ver" : "0.1.3",
       "build_uid" : "d27ecf19-ef5d-4cb8-95ea-ca733c1bf485",
-      "MD5-CAM-1.0.1" : "508a2820a47a20542f0aa981daec5b3e",
+      "MD5-CAM-1.0.1" : "f95dbae9ab096b333e102959d660c409",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -850,6 +850,7 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0028.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -1018,12 +1019,6 @@
             "text" : "Bone age type",
             "description" : "The assessment method used to estimate the skeletal age.",
             "comment" : "For example: Greulich & Pyle, Fishman method."
-          },
-          "at0028.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028.1",
-            "text" : "Event text",
-            "description" : "Narrative descripiton of any issues or factors that may impact on the assessment."
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1559,7 +1554,15 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : { },
-        "en" : { },
+        "en" : {
+          "at0019.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019.1",
+            "text" : "Sex",
+            "description" : "The sex of an individual determined by anatomical characteristics observed and registered at birth.",
+            "comment" : "For example: 'Male', 'Female', 'Intersex'. Coding with a terminology is recommended, where possible. Use the element 'Comment' or the SLOT 'Details' if needed to register more specific details of the individuals gender."
+          }
+        },
         "de" : { },
         "sv" : { },
         "pt-pt" : { }
@@ -2780,7 +2783,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0018.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -2917,7 +2919,7 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "height",
+            "text" : "Height",
             "description" : "The length of the body from crown of head to sole of foot."
           },
           "cm" : {
@@ -2925,6 +2927,12 @@
             "text" : "Height in cm",
             "description" : "centimeter",
             "code" : "cm"
+          },
+          "at0018.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018.1",
+            "text" : "Event",
+            "description" : "Additional narrative about the measurement, not captured in other fields."
           }
         },
         "de" : {
@@ -3610,7 +3618,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0024.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -3801,17 +3808,17 @@
             "code" : "ac0.1",
             "description" : ""
           },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.1",
-            "text" : "weight",
-            "description" : "The weight of the individual."
-          },
           "kg" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "Weight in kg",
             "description" : "kilogram",
             "code" : "kg"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Event",
+            "description" : "Additional narrative about the measurement of Body weight, not captured in other fields."
           }
         },
         "de" : {
@@ -4309,7 +4316,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0007.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -4384,7 +4390,7 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "ofc",
+            "text" : "OFC",
             "description" : "The measurement of the longest distance around the head."
           },
           "cm" : {
@@ -4392,6 +4398,12 @@
             "text" : "Head circumference in cm",
             "description" : "centimeter",
             "code" : "cm"
+          },
+          "at0007.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.1",
+            "text" : "Event",
+            "description" : "Additional narrative about the head circumference not captured in other fields."
           }
         },
         "pt-br" : {
@@ -4842,7 +4854,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0012.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -4968,8 +4979,14 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "bmi",
+            "text" : "BMI",
             "description" : "Index describing ratio of weight to height."
+          },
+          "at0012.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012.1",
+            "text" : "Event",
+            "description" : "Additional narrative about the calculation, not captured in other fields."
           }
         },
         "ar-sy" : {
