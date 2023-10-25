@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.4",
+      "sem_ver" : "0.1.5",
       "build_uid" : "d27ecf19-ef5d-4cb8-95ea-ca733c1bf485",
-      "MD5-CAM-1.0.1" : "db91089ec28ee6eaa2f815541aca4860",
+      "MD5-CAM-1.0.1" : "456f0dd440a2a8057af9b5f0d97b641a",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -1063,6 +1063,12 @@
             "code" : "at0000.1",
             "text" : "Bone age",
             "description" : "An estimate of biological age by assessing the degree of maturation of an individual's bones.\n\nSpecialised for use with the RCPCH in the UK."
+          },
+          "a" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "year(s)",
+            "description" : "year",
+            "code" : "a"
           }
         },
         "nb" : {
@@ -1083,6 +1089,12 @@
             "code" : "at0000",
             "text" : "*Skeletal age (RCPCH) (en) (2)",
             "description" : "*An estimate of biological age by assessing the degree of maturation of an individual's bones.\n\nSpecialised for use with the RCPCH in the UK. (en)"
+          },
+          "a" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*y (en)",
+            "description" : "*year (en)",
+            "code" : "a"
           }
         }
       },
