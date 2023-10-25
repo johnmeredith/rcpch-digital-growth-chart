@@ -52,7 +52,7 @@ The skeletal age can be determined by several different methods including but no
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a7c4fbfb0c1ff7cb77231378753eda58">
+		["MD5-CAM-1.0.1"] = <"c8a85d5ea8bacc0f70c44b3ca7c71ac8">
 		["build_uid"] = <"a822e12b-acdb-4d58-ba48-f03745d9ff83">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -71,6 +71,15 @@ definition
 											DV_DURATION matches {
 												value matches {PYM/|>=P0Y|}
 											}
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"a">
+														precision = <|1|>
+													>
+												>
+											>
 										}
 									}
 									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Comment
