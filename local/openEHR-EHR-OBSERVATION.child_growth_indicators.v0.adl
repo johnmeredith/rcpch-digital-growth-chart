@@ -28,12 +28,6 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Heather Leslie, Ocean Informatics, Australia","Sam Heard, Ocean Informatics, Australia">
 	details = <
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			other_details = <
-				["notes"] = <"Generated automatically by Adl Designer">
-			>
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about parameters plotted as percentiles on a growth chart.">
@@ -45,6 +39,12 @@ Use the URI to explicitly link the original measurement as recorded.
 
 Use in a template alongside OBSERVATION.age to record the adjusted age of an infant as part of monitoring child growth patterns.">
 			misuse = <"Not to be used to record actual measurements. Use appropriate OBSERVATION archetypes for this purpose - for example OBSERVATION.height, OBSERVATION.weight, OBSERVATION.head_circumference, OBSERVATION.body_segment or OBSERVATION.blood_pressure.">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			other_details = <
+				["notes"] = <"Generated automatically by Adl Designer">
+			>
 		>
 	>
 	other_details = <
@@ -61,7 +61,7 @@ World Health Organiation [Internet]. Geneva: World Health Organization.The WHO C
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"05c33791b88da62c6c733a424255d705">
+		["MD5-CAM-1.0.1"] = <"1791b142fff1e65be282a1180c573ce4">
 		["build_uid"] = <"6cfa0c11-888c-48d7-a2f8-d9072d3b646b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -147,6 +147,11 @@ definition
 					allow_archetype CLUSTER[at0032] occurrences matches {0..*} matches {    -- Extension
 						include
 							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0042] occurrences matches {0..1} matches {    -- Reference
+						value matches {
+							DV_TEXT matches {*}
+						}
 					}
 				}
 			}
@@ -267,6 +272,10 @@ ontology
 					text = <"Clinical interpretation">
 					description = <"Clinical interpretation of the growth indicator chart.">
 				>
+				["at0042"] = <
+					text = <"Reference">
+					description = <"Indicator calculation reference e.g. WHO, Down's Syndrome or Turner Syndrome.">
+				>
 			>
 		>
 		["sl"] = <
@@ -380,6 +389,10 @@ ontology
 				["at0041"] = <
 					text = <"*Clinical interpretation(en)">
 					description = <"*Clinical interpretation of the growth indicator chart.(en)">
+				>
+				["at0042"] = <
+					text = <"*Reference (en)">
+					description = <"*Indicator calculation reference e.g. WHO, Down's Syndrome or Turner Syndrome. (en)">
 				>
 			>
 		>
