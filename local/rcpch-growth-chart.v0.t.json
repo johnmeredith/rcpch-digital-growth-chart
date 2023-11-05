@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.30",
+      "sem_ver" : "0.1.31",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b50866c0e31ff9a4fe091a88336bba12",
+      "MD5-CAM-1.0.1" : "5c7fc1c4895052847cabca79ad98c387",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -1592,7 +1592,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "507649ebbc9a4d18a004ef4f070f5fa6"
+        "PARENT:MD5-CAM-1.0.1" : "3B42BB91BE754B59230551D64B998DAD"
       },
       "details" : {
         "nb" : {
@@ -2101,7 +2101,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "05b1eea5ddd5216e247d1c7517992283"
+        "PARENT:MD5-CAM-1.0.1" : "D95F81C9ECC1E4AACABD37C3B1E651EA"
       },
       "details" : {
         "en" : {
@@ -2473,48 +2473,6 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0042.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "uk-who",
-                        "value" : "UK-WHO"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "turner",
-                        "value" : "Turner's Syndrome"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "trisomy-21",
-                        "value" : "Down's Syndrome"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
@@ -2732,7 +2690,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "05b1eea5ddd5216e247d1c7517992283"
+        "PARENT:MD5-CAM-1.0.1" : "D95F81C9ECC1E4AACABD37C3B1E651EA"
       },
       "details" : {
         "en" : {
@@ -3098,52 +3056,6 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0042.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "defaultValue" : {
-                    "defining_code" : {
-                      "terminology_id" : {
-                        "value" : "local_terms",
-                        "@type" : "TERMINOLOGY_ID"
-                      },
-                      "code_string" : "uk-who",
-                      "@type" : "CODE_PHRASE"
-                    },
-                    "value" : "UK-WHO",
-                    "@type" : "DV_CODED_TEXT"
-                  },
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "uk-who",
-                        "value" : "UK-WHO"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
@@ -3381,7 +3293,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "05b1eea5ddd5216e247d1c7517992283"
+        "PARENT:MD5-CAM-1.0.1" : "D95F81C9ECC1E4AACABD37C3B1E651EA"
       },
       "details" : {
         "en" : {
@@ -3735,52 +3647,6 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0042.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "defaultValue" : {
-                    "defining_code" : {
-                      "terminology_id" : {
-                        "value" : "local_terms",
-                        "@type" : "TERMINOLOGY_ID"
-                      },
-                      "code_string" : "uk-who",
-                      "@type" : "CODE_PHRASE"
-                    },
-                    "value" : "UK-WHO",
-                    "@type" : "DV_CODED_TEXT"
-                  },
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "uk-who",
-                        "value" : "UK-WHO"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
@@ -3981,7 +3847,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "05b1eea5ddd5216e247d1c7517992283"
+        "PARENT:MD5-CAM-1.0.1" : "D95F81C9ECC1E4AACABD37C3B1E651EA"
       },
       "details" : {
         "en" : {
@@ -5805,7 +5671,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "0ea74a07d414f52428b38af0046d5d2f",
-        "PARENT:MD5-CAM-1.0.1" : "2662a2e00fccc9990adc080633d25919"
+        "PARENT:MD5-CAM-1.0.1" : "1281A10F9571D51164CAFCED7273DCFF"
       },
       "details" : {
         "en" : {
@@ -6002,13 +5868,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.1",
-            "text" : "Gestation",
-            "description" : "The length of the pregnancy at the time of delivery of the infant.",
-            "comment" : "The value for this data element will usually, but not always, be identical to the 'Pregnancy duration' data element within the EVALUATION.pregnancy_summary in the maternal record. It may also be derived using the 'Agreed date' data element within the EVALUATION.estimated_date_delivery archetype in the maternal record. Usually estimated by Naegele's rule or by ultrasound scan."
           }
         }
       },
@@ -6062,7 +5921,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "cf953c025e637063ba6e8ac3d1fba9a6",
-        "PARENT:MD5-CAM-1.0.1" : "BF9B28403CBB9F2FB9C120F3EB89DA8E"
+        "PARENT:MD5-CAM-1.0.1" : "111A027E41E44BD9B3C9C014DB55D3FF"
       },
       "details" : {
         "de" : {
@@ -6210,13 +6069,6 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0020.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0027.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
