@@ -61,7 +61,7 @@ World Health Organiation [Internet]. Geneva: World Health Organization.The WHO C
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"05b1eea5ddd5216e247d1c7517992283">
+		["MD5-CAM-1.0.1"] = <"D95F81C9ECC1E4AACABD37C3B1E651EA">
 		["build_uid"] = <"6cfa0c11-888c-48d7-a2f8-d9072d3b646b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -147,11 +147,6 @@ definition
 					allow_archetype CLUSTER[at0032] occurrences matches {0..*} matches {    -- Extension
 						include
 							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[at0042] occurrences matches {0..1} matches {    -- Reference
-						value matches {
-							DV_TEXT matches {*}
-						}
 					}
 				}
 			}
@@ -272,10 +267,6 @@ ontology
 					text = <"Clinical interpretation">
 					description = <"Clinical interpretation of the growth indicator chart.">
 				>
-				["at0042"] = <
-					text = <"Reference">
-					description = <"Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome.">
-				>
 			>
 		>
 		["sl"] = <
@@ -389,10 +380,6 @@ ontology
 				["at0041"] = <
 					text = <"*Clinical interpretation(en)">
 					description = <"*Clinical interpretation of the growth indicator chart.(en)">
-				>
-				["at0042"] = <
-					text = <"*DV_TEXT (en)">
-					description = <"">
 				>
 			>
 		>
