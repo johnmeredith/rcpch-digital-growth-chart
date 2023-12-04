@@ -28,7 +28,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"62a38e9931bb064eabe90793b1b13ad8">
+		["MD5-CAM-1.0.1"] = <"f15c23e332f0311d607fcf7ea2ecac1f">
 		["build_uid"] = <"92c56274-e98b-4dc8-a612-3913118f3550">
 	>
 
@@ -37,14 +37,7 @@ definition
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Calculation reference
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0002,    -- uk-who
-							at0003,    -- turner
-							at0004]    -- trisomy-21
-						}
-					}
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -62,18 +55,6 @@ ontology
 					text = <"Calculation reference">
 					description = <"Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome.">
 					comment = <"For use with the Royal College of Paediatrics and Child Health (RCPCH) API.">
-				>
-				["at0002"] = <
-					text = <"uk-who">
-					description = <"UK-WHO">
-				>
-				["at0003"] = <
-					text = <"turner">
-					description = <"Turner's Syndrome">
-				>
-				["at0004"] = <
-					text = <"trisomy-21">
-					description = <"Down's Syndrome">
 				>
 			>
 		>
