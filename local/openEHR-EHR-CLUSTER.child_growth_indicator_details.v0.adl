@@ -28,12 +28,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7e5abc65754c22f47660f02723ebc8ef">
+		["MD5-CAM-1.0.1"] = <"62a38e9931bb064eabe90793b1b13ad8">
 		["build_uid"] = <"92c56274-e98b-4dc8-a612-3913118f3550">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- child_growth_indicator_details
+	CLUSTER[at0000] matches {    -- Child growth indicator details
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Calculation reference
 				value matches {
@@ -55,7 +55,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"child_growth_indicator_details">
+					text = <"Child growth indicator details">
 					description = <"To allow for the capture of additional information as part of a child growth indicator calculation, e.g. a reference type in the RCPCH digital growth chart to indicate this is for Turner's Syndrome.">
 				>
 				["at0001"] = <
