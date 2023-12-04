@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.2.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "caa3423374e71ff2f7ebe56447fd6591",
+      "MD5-CAM-1.0.1" : "ee17c2e44b86ab9c4ccf22ba425a7401",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -5066,21 +5066,14 @@
                 "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
+                  "rmTypeName" : "DV_TEXT",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
+                    "rmAttributeName" : "value",
                     "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "UKCore-BirthSex"
-                      },
-                      "constraint" : [ "ac0.1" ],
-                      "selectedTerminologies" : [ "UKCore-BirthSex" ],
-                      "limitToList" : false
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "male", "female", "other", "unknown" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -5310,11 +5303,7 @@
           }
         }
       },
-      "termBindings" : {
-        "UKCore-BirthSex" : {
-          "ac0.1" : "terminology:https://fhir.hl7.org.uk/ValueSet/UKCore-BirthSex"
-        }
-      },
+      "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
