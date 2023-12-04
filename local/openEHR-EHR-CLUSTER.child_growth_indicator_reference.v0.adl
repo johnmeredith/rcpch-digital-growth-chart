@@ -10,11 +10,16 @@ language
 description
 	original_author = <
 		["date"] = <"2023-12-04">
+		["name"] = <"John Meredith">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"john.meredith@openehr.org">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To support additional information capture when generating child growth charts. ">
+			keywords = <"Royal College of Paediatrics and Child Health, RCPCH", ...>
 		>
 	>
 	other_details = <
@@ -23,12 +28,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"88f8e00aa87c4c05d4eee1ab03ee0821">
-		["build_uid"] = <"aa8d5f39-df94-3702-ba81-1f79524f4cc8">
+		["build_uid"] = <"92c56274-e98b-4dc8-a612-3913118f3550">
+		["MD5-CAM-1.0.1"] = <"eec87f70c182cda9240380fa8ca1f3b1">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Child_growth_indicator_reference
+	CLUSTER[at0000] matches {    -- Child growth indicator reference
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Calculation reference
 				value matches {
@@ -50,8 +55,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Child_growth_indicator_reference">
-					description = <"Child_growth_indicator_reference">
+					text = <"Child growth indicator reference">
+					description = <"To allow for the capture of additional information as part of a child growth indicator calculation, e.g. the RCPCH digital growth chart.">
 				>
 				["at0001"] = <
 					text = <"Calculation reference">
