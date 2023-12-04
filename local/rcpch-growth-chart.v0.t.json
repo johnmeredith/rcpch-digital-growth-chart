@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.32",
+      "sem_ver" : "0.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "4ad1fcd382ae325bee0f7a3b687ee3e6",
+      "MD5-CAM-1.0.1" : "caa3423374e71ff2f7ebe56447fd6591",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -2032,12 +2032,6 @@
             "text" : "Event text",
             "description" : "Narrative descripiton of any issues or factors that may impact on the assessment."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Skeletal age (RCPCH)",
-            "description" : "An estimate of biological age by assessing the degree of maturation of an individual's bones.\n\nSpecialised for use with the RCPCH in the UK to include additional elements."
-          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000",
@@ -2057,12 +2051,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Skeletal age (RCPCH) (en)",
-            "description" : "*An estimate of biological age by assessing the degree of maturation of an individual's bones.\n\nSpecialised for use with the RCPCH in the UK to include additional elements. (en)"
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -2497,49 +2485,14 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0042.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "uk-who",
-                        "value" : "UK-WHO"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "turner",
-                        "value" : "Turner's Syndrome"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "trisomy-21",
-                        "value" : "Down's Syndrome"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
+              "nodeId" : "at0032.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-001.v0",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -2625,12 +2578,6 @@
             "code" : "at0042",
             "text" : "Reference",
             "description" : "Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome."
-          },
-          "at0042.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0042",
-            "text" : "Reference",
-            "description" : "Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome."
           }
         },
         "sl" : {
@@ -2647,12 +2594,6 @@
             "description" : ""
           },
           "at0042" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0042",
-            "text" : "*DV_TEXT (en)",
-            "description" : ""
-          },
-          "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042",
             "text" : "*DV_TEXT (en)",
@@ -3139,61 +3080,13 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0042.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "defaultValue" : {
-                    "defining_code" : {
-                      "terminology_id" : {
-                        "value" : "local_terms",
-                        "@type" : "TERMINOLOGY_ID"
-                      },
-                      "code_string" : "uk-who",
-                      "@type" : "CODE_PHRASE"
-                    },
-                    "value" : "UK-WHO",
-                    "@type" : "DV_CODED_TEXT"
-                  },
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "uk-who",
-                        "value" : "UK-WHO"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0032.1",
+              "nodeId" : "at0032.2",
               "attributes" : [ ],
               "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-media_file-004.v1",
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-002.v0",
               "referenceType" : "archetypeOverlay"
             } ]
           } ],
@@ -3280,12 +3173,6 @@
             "code" : "at0042",
             "text" : "Reference",
             "description" : "Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome."
-          },
-          "at0042.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0042",
-            "text" : "Reference",
-            "description" : "Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome."
           }
         },
         "sl" : {
@@ -3302,12 +3189,6 @@
             "description" : ""
           },
           "at0042" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0042",
-            "text" : "*DV_TEXT (en)",
-            "description" : ""
-          },
-          "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042",
             "text" : "*DV_TEXT (en)",
@@ -3802,61 +3683,13 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0042.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "defaultValue" : {
-                    "defining_code" : {
-                      "terminology_id" : {
-                        "value" : "local_terms",
-                        "@type" : "TERMINOLOGY_ID"
-                      },
-                      "code_string" : "uk-who",
-                      "@type" : "CODE_PHRASE"
-                    },
-                    "value" : "UK-WHO",
-                    "@type" : "DV_CODED_TEXT"
-                  },
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "uk-who",
-                        "value" : "UK-WHO"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0032.1",
+              "nodeId" : "at0032.2",
               "attributes" : [ ],
               "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-media_file-002.v1",
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-003.v0",
               "referenceType" : "archetypeOverlay"
             } ]
           } ],
@@ -3931,12 +3764,6 @@
             "code" : "at0042",
             "text" : "Reference",
             "description" : "Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome."
-          },
-          "at0042.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0042",
-            "text" : "Reference",
-            "description" : "Calculation reference for the growth indicator e.g. WHO, Down's Syndrome or Turner Syndrome."
           }
         },
         "sl" : {
@@ -3953,12 +3780,6 @@
             "description" : ""
           },
           "at0042" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0042",
-            "text" : "*DV_TEXT (en)",
-            "description" : ""
-          },
-          "at0042.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0042",
             "text" : "*DV_TEXT (en)",
@@ -4443,10 +4264,10 @@
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0032.1",
+              "nodeId" : "at0032.2",
               "attributes" : [ ],
               "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-media_file-003.v1",
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-004.v0",
               "referenceType" : "archetypeOverlay"
             } ]
           } ],
@@ -4672,789 +4493,6 @@
       "otherDetails" : {
         "notes" : "Generated automatically by Adl Designer"
       }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "653b829e-066c-44dd-bb17-b6c1b68fa102",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "F3CC0032E8B4B09C7B535211E3DFAE66"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.",
-          "keywords" : [ "Bild", "Audio", "Text", "Video", "Anwendung", "Datei", "Multimedia", "DICOM", "digital", "Dokument", "Foto", "Sprachaufnahme" ],
-          "use" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.\r\n\r\nDie Absicht dieses Archetyps besteht nur darin, die Mediendatei und die Metadaten, die ihre Erfassung beschreiben, darzustellen. Dieser Archetyp wird in einen anderen Archetyp verschachtelt, normalerweise ein OBSERVATION- oder ACTION-Archetyp, der den Kontext und die Umstände im Zusammenhang mit der Erfassung der Mediendatei enthält. Zum Beispiel werden Details zu Modalität, Ansicht oder Aspekt eines Röntgenbildes und DICOM-Details im Archetyp OBSERVATION.imaging_exam_result dargestellt.\r\n\r\nDie Beispiele umfassen, sind aber nicht beschränkt auf:\r\n- Ein Foto einer Verletzung;\r\n- Ein Diagramm der Lokalisation eines bestimmten klinischen Befundes;\r\n- Ein digitales Ergebnis der Röntgen- oder CT-Aufnahme;\r\n- Eine Audio- oder Videoaufzeichnung eines Interviews;\r\n- Gescannte pathologische Schnitte;\r\n- Datenausgabe von einem klinischen Gerät, wie z.B. einem EKG-Gerät; oder\r\n- Ein gescanntes Bild von handgeschriebenen klinischen Notizen.\r\n\r\nDas Datenelement „Inhalt“ ermöglicht mithilfe des Multimedia-Datentyps die Erfassung und Speicherung der Mediendatei in der Gesundheitsakte. Der Multimedia-Datentyp hat viele RM-Attribute wie die Dateigröße und URI zu einer externen Quelle. Siehe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nWenn mehr als eine Mediendatei erfasst wurde, z. B. „Vorher“- und „Nachher“-Bilder einer Wunde, verwenden Sie eine Instanz dieses Archetyps, um jede Mediendatei darzustellen.\r\n\r\nWenn eine Reihe von Mediendateien als einzelnes Element dargestellt wird, z. B. ein CT-Scan, kann eine Instanz dieses Archetyps verwendet werden, um einen URI-Pfad zu der Gruppe darzustellen.\r\n\r\n\r\n\r\n",
-          "misuse" : "Nicht zur Darstellung von Informationen, Lehr- oder Schulungsmaterial verwenden, die außerhalb des Gesundheitsprozesses generiert werden, z. B. Broschüren zur Patientenaufklärung, die dem Patienten oder der Pflegeperson zur Verfügung gestellt werden. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.information_resource.\r\n\r\nNicht zur Darstellung von Referenz auf eine externe digitale Ressource, die als Quelle für maßgebliche Informationen oder Experteninformationen verwendet wird. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.knowledge_base_reference.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "*To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata. (en)",
-          "keywords" : [ "*image (en)", "*audio (en)", "*text (en)", "*video (en)", "*application (en)", "*file (en)", "*multimedia (en)", "*audio (en)", "*DICOM (en)", "*digital (en)", "*document (en)", "*photo (en)", "*voice (en)" ],
-          "use" : "*Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group. (en)",
-          "misuse" : "*Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.",
-          "keywords" : [ "bilde", "foto", "audio", "tekstfil", "video", "applikasjon", "fil", "multimedia", "DICOM", "digital", "dokument", "skannet", "scannet", "lyd" ],
-          "use" : "Brukes for å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.\r\n\r\nHensikten med denne arketypen er kun å være en bærer for mediafilen og metadataene som beskriver innholdet i filen. Denne arketypen vil være nøstet i en annen arketype, vanligvis en OBSERVATION eller ACTION arketype, som vil inneholde konteksten og omstendighetene knyttet til hvordan innholdet ble dannet. For eksempel blir detaljer om modalitet, visning eller aspekt av et radiologisk bilde og DICOM-detaljer dokumentert i arketypen OBSERVATION.imaging_exam_result.\r\n\r\nEksempler inkluderer, men er ikke begrenset til:\r\n- Et bilde av en skade;\r\n- Et diagram over plasseringen av et spesifikt klinisk funn;\r\n- Et digital radiologisk bilde;\r\n- Et lyd- eller videoopptak av et intervju;\r\n- Et skannet objektglass til mikroskopisk diagnostikk;\r\n- Data fra medisinsk utstyr, for eksempel en EKG-apparat;\r\n- Et skannet bilde av papirdokumentasjon eller håndskrevne kliniske notater.\r\n\r\nDataelementet \"Innhold\" gjør det mulig å fange og lagre mediafiler i den elektroniske pasientjournalen (EPJ) ved hjelp av multimedia-datatypen. Multimedia-datatypen har mange RM-attributter, for eksempel filstørrelsen og URI til en ekstern kilde. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nHvis mer enn én mediafil skal dokumenteres, for eksempel bilder før og etter behandling av et sår, bruk en forekomst av denne arketypen for hvert bilde.\r\n\r\nHvis en serie mediafiler er representert som et enkelt element, for eksempel en CT-skanning, kan en forekomst av denne arketypen brukes til å representere en URI til gruppen/serien.",
-          "misuse" : "Skal ikke brukes til å representere informasjon, instruksjons- eller utdanningsmateriale levert til en person, eller dens omsorgsperson, for eksempel brosjyrer for pasientopplæring. Bruk CLUSTER.information_resource til dette formålet.\r\n\r\nSkal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUSTER. Knowledge_base_reference for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.",
-          "keywords" : [ "image", "audio", "text", "video", "application", "file", "multimedia", "audio", "DICOM", "digital", "document", "photo", "voice" ],
-          "use" : "Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group.",
-          "misuse" : "Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-media_file-002.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "defaultValue" : {
-                "value" : "Imported RCHPH results",
-                "@type" : "DV_TEXT"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0010.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "defaultValue" : {
-                "@type" : "DV_IDENTIFIER"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Calculation results",
-            "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "*Media file (en) (2)",
-            "description" : "*A media file that is acquired or used as part of the healthcare process, and associated metadata. (en)"
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Mediendatei (2)",
-            "description" : "Eine Mediendatei mit zugehörigen Metadaten, die im Rahmen des Gesundheitsprozesses erworben oder verwendet wird."
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Mediafil (2)",
-            "description" : "En mediafil, samt tilknyttede metadata, som er ervervet eller brukt forbindelse med en helsetjeneste."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "2f03659f-7d8f-4bd3-8b83-c49a783b085d",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Natalia Strauch",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "Strauch.Natalia@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Åsa Skagerhult, Erik Sundvall",
-        "organisation" : "Region Östergötland",
-        "email" : "asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Liv Laugen, John Tore Valand",
-        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen",
-        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "653b829e-066c-44dd-bb17-b6c1b68fa102",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "F3CC0032E8B4B09C7B535211E3DFAE66"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.",
-          "keywords" : [ "Bild", "Audio", "Text", "Video", "Anwendung", "Datei", "Multimedia", "DICOM", "digital", "Dokument", "Foto", "Sprachaufnahme" ],
-          "use" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.\r\n\r\nDie Absicht dieses Archetyps besteht nur darin, die Mediendatei und die Metadaten, die ihre Erfassung beschreiben, darzustellen. Dieser Archetyp wird in einen anderen Archetyp verschachtelt, normalerweise ein OBSERVATION- oder ACTION-Archetyp, der den Kontext und die Umstände im Zusammenhang mit der Erfassung der Mediendatei enthält. Zum Beispiel werden Details zu Modalität, Ansicht oder Aspekt eines Röntgenbildes und DICOM-Details im Archetyp OBSERVATION.imaging_exam_result dargestellt.\r\n\r\nDie Beispiele umfassen, sind aber nicht beschränkt auf:\r\n- Ein Foto einer Verletzung;\r\n- Ein Diagramm der Lokalisation eines bestimmten klinischen Befundes;\r\n- Ein digitales Ergebnis der Röntgen- oder CT-Aufnahme;\r\n- Eine Audio- oder Videoaufzeichnung eines Interviews;\r\n- Gescannte pathologische Schnitte;\r\n- Datenausgabe von einem klinischen Gerät, wie z.B. einem EKG-Gerät; oder\r\n- Ein gescanntes Bild von handgeschriebenen klinischen Notizen.\r\n\r\nDas Datenelement „Inhalt“ ermöglicht mithilfe des Multimedia-Datentyps die Erfassung und Speicherung der Mediendatei in der Gesundheitsakte. Der Multimedia-Datentyp hat viele RM-Attribute wie die Dateigröße und URI zu einer externen Quelle. Siehe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nWenn mehr als eine Mediendatei erfasst wurde, z. B. „Vorher“- und „Nachher“-Bilder einer Wunde, verwenden Sie eine Instanz dieses Archetyps, um jede Mediendatei darzustellen.\r\n\r\nWenn eine Reihe von Mediendateien als einzelnes Element dargestellt wird, z. B. ein CT-Scan, kann eine Instanz dieses Archetyps verwendet werden, um einen URI-Pfad zu der Gruppe darzustellen.\r\n\r\n\r\n\r\n",
-          "misuse" : "Nicht zur Darstellung von Informationen, Lehr- oder Schulungsmaterial verwenden, die außerhalb des Gesundheitsprozesses generiert werden, z. B. Broschüren zur Patientenaufklärung, die dem Patienten oder der Pflegeperson zur Verfügung gestellt werden. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.information_resource.\r\n\r\nNicht zur Darstellung von Referenz auf eine externe digitale Ressource, die als Quelle für maßgebliche Informationen oder Experteninformationen verwendet wird. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.knowledge_base_reference.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "*To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata. (en)",
-          "keywords" : [ "*image (en)", "*audio (en)", "*text (en)", "*video (en)", "*application (en)", "*file (en)", "*multimedia (en)", "*audio (en)", "*DICOM (en)", "*digital (en)", "*document (en)", "*photo (en)", "*voice (en)" ],
-          "use" : "*Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group. (en)",
-          "misuse" : "*Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.",
-          "keywords" : [ "bilde", "foto", "audio", "tekstfil", "video", "applikasjon", "fil", "multimedia", "DICOM", "digital", "dokument", "skannet", "scannet", "lyd" ],
-          "use" : "Brukes for å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.\r\n\r\nHensikten med denne arketypen er kun å være en bærer for mediafilen og metadataene som beskriver innholdet i filen. Denne arketypen vil være nøstet i en annen arketype, vanligvis en OBSERVATION eller ACTION arketype, som vil inneholde konteksten og omstendighetene knyttet til hvordan innholdet ble dannet. For eksempel blir detaljer om modalitet, visning eller aspekt av et radiologisk bilde og DICOM-detaljer dokumentert i arketypen OBSERVATION.imaging_exam_result.\r\n\r\nEksempler inkluderer, men er ikke begrenset til:\r\n- Et bilde av en skade;\r\n- Et diagram over plasseringen av et spesifikt klinisk funn;\r\n- Et digital radiologisk bilde;\r\n- Et lyd- eller videoopptak av et intervju;\r\n- Et skannet objektglass til mikroskopisk diagnostikk;\r\n- Data fra medisinsk utstyr, for eksempel en EKG-apparat;\r\n- Et skannet bilde av papirdokumentasjon eller håndskrevne kliniske notater.\r\n\r\nDataelementet \"Innhold\" gjør det mulig å fange og lagre mediafiler i den elektroniske pasientjournalen (EPJ) ved hjelp av multimedia-datatypen. Multimedia-datatypen har mange RM-attributter, for eksempel filstørrelsen og URI til en ekstern kilde. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nHvis mer enn én mediafil skal dokumenteres, for eksempel bilder før og etter behandling av et sår, bruk en forekomst av denne arketypen for hvert bilde.\r\n\r\nHvis en serie mediafiler er representert som et enkelt element, for eksempel en CT-skanning, kan en forekomst av denne arketypen brukes til å representere en URI til gruppen/serien.",
-          "misuse" : "Skal ikke brukes til å representere informasjon, instruksjons- eller utdanningsmateriale levert til en person, eller dens omsorgsperson, for eksempel brosjyrer for pasientopplæring. Bruk CLUSTER.information_resource til dette formålet.\r\n\r\nSkal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUSTER. Knowledge_base_reference for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.",
-          "keywords" : [ "image", "audio", "text", "video", "application", "file", "multimedia", "audio", "DICOM", "digital", "document", "photo", "voice" ],
-          "use" : "Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group.",
-          "misuse" : "Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-media_file-003.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "defaultValue" : {
-                "value" : "Imported RCHPH results",
-                "@type" : "DV_TEXT"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0010.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "defaultValue" : {
-                "@type" : "DV_IDENTIFIER"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Calculation results",
-            "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
-          }
-        },
-        "sv" : { },
-        "de" : { },
-        "nb" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "2f03659f-7d8f-4bd3-8b83-c49a783b085d",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Natalia Strauch",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "Strauch.Natalia@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Åsa Skagerhult, Erik Sundvall",
-        "organisation" : "Region Östergötland",
-        "email" : "asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Liv Laugen, John Tore Valand",
-        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen",
-        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "653b829e-066c-44dd-bb17-b6c1b68fa102",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "F3CC0032E8B4B09C7B535211E3DFAE66"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.",
-          "keywords" : [ "Bild", "Audio", "Text", "Video", "Anwendung", "Datei", "Multimedia", "DICOM", "digital", "Dokument", "Foto", "Sprachaufnahme" ],
-          "use" : "Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.\r\n\r\nDie Absicht dieses Archetyps besteht nur darin, die Mediendatei und die Metadaten, die ihre Erfassung beschreiben, darzustellen. Dieser Archetyp wird in einen anderen Archetyp verschachtelt, normalerweise ein OBSERVATION- oder ACTION-Archetyp, der den Kontext und die Umstände im Zusammenhang mit der Erfassung der Mediendatei enthält. Zum Beispiel werden Details zu Modalität, Ansicht oder Aspekt eines Röntgenbildes und DICOM-Details im Archetyp OBSERVATION.imaging_exam_result dargestellt.\r\n\r\nDie Beispiele umfassen, sind aber nicht beschränkt auf:\r\n- Ein Foto einer Verletzung;\r\n- Ein Diagramm der Lokalisation eines bestimmten klinischen Befundes;\r\n- Ein digitales Ergebnis der Röntgen- oder CT-Aufnahme;\r\n- Eine Audio- oder Videoaufzeichnung eines Interviews;\r\n- Gescannte pathologische Schnitte;\r\n- Datenausgabe von einem klinischen Gerät, wie z.B. einem EKG-Gerät; oder\r\n- Ein gescanntes Bild von handgeschriebenen klinischen Notizen.\r\n\r\nDas Datenelement „Inhalt“ ermöglicht mithilfe des Multimedia-Datentyps die Erfassung und Speicherung der Mediendatei in der Gesundheitsakte. Der Multimedia-Datentyp hat viele RM-Attribute wie die Dateigröße und URI zu einer externen Quelle. Siehe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nWenn mehr als eine Mediendatei erfasst wurde, z. B. „Vorher“- und „Nachher“-Bilder einer Wunde, verwenden Sie eine Instanz dieses Archetyps, um jede Mediendatei darzustellen.\r\n\r\nWenn eine Reihe von Mediendateien als einzelnes Element dargestellt wird, z. B. ein CT-Scan, kann eine Instanz dieses Archetyps verwendet werden, um einen URI-Pfad zu der Gruppe darzustellen.\r\n\r\n\r\n\r\n",
-          "misuse" : "Nicht zur Darstellung von Informationen, Lehr- oder Schulungsmaterial verwenden, die außerhalb des Gesundheitsprozesses generiert werden, z. B. Broschüren zur Patientenaufklärung, die dem Patienten oder der Pflegeperson zur Verfügung gestellt werden. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.information_resource.\r\n\r\nNicht zur Darstellung von Referenz auf eine externe digitale Ressource, die als Quelle für maßgebliche Informationen oder Experteninformationen verwendet wird. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.knowledge_base_reference.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "*To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata. (en)",
-          "keywords" : [ "*image (en)", "*audio (en)", "*text (en)", "*video (en)", "*application (en)", "*file (en)", "*multimedia (en)", "*audio (en)", "*DICOM (en)", "*digital (en)", "*document (en)", "*photo (en)", "*voice (en)" ],
-          "use" : "*Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group. (en)",
-          "misuse" : "*Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.",
-          "keywords" : [ "bilde", "foto", "audio", "tekstfil", "video", "applikasjon", "fil", "multimedia", "DICOM", "digital", "dokument", "skannet", "scannet", "lyd" ],
-          "use" : "Brukes for å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.\r\n\r\nHensikten med denne arketypen er kun å være en bærer for mediafilen og metadataene som beskriver innholdet i filen. Denne arketypen vil være nøstet i en annen arketype, vanligvis en OBSERVATION eller ACTION arketype, som vil inneholde konteksten og omstendighetene knyttet til hvordan innholdet ble dannet. For eksempel blir detaljer om modalitet, visning eller aspekt av et radiologisk bilde og DICOM-detaljer dokumentert i arketypen OBSERVATION.imaging_exam_result.\r\n\r\nEksempler inkluderer, men er ikke begrenset til:\r\n- Et bilde av en skade;\r\n- Et diagram over plasseringen av et spesifikt klinisk funn;\r\n- Et digital radiologisk bilde;\r\n- Et lyd- eller videoopptak av et intervju;\r\n- Et skannet objektglass til mikroskopisk diagnostikk;\r\n- Data fra medisinsk utstyr, for eksempel en EKG-apparat;\r\n- Et skannet bilde av papirdokumentasjon eller håndskrevne kliniske notater.\r\n\r\nDataelementet \"Innhold\" gjør det mulig å fange og lagre mediafiler i den elektroniske pasientjournalen (EPJ) ved hjelp av multimedia-datatypen. Multimedia-datatypen har mange RM-attributter, for eksempel filstørrelsen og URI til en ekstern kilde. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nHvis mer enn én mediafil skal dokumenteres, for eksempel bilder før og etter behandling av et sår, bruk en forekomst av denne arketypen for hvert bilde.\r\n\r\nHvis en serie mediafiler er representert som et enkelt element, for eksempel en CT-skanning, kan en forekomst av denne arketypen brukes til å representere en URI til gruppen/serien.",
-          "misuse" : "Skal ikke brukes til å representere informasjon, instruksjons- eller utdanningsmateriale levert til en person, eller dens omsorgsperson, for eksempel brosjyrer for pasientopplæring. Bruk CLUSTER.information_resource til dette formålet.\r\n\r\nSkal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUSTER. Knowledge_base_reference for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.",
-          "keywords" : [ "image", "audio", "text", "video", "application", "file", "multimedia", "audio", "DICOM", "digital", "document", "photo", "voice" ],
-          "use" : "Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.\r\n\r\nThe intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. \r\n\r\nExamples include, but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A radiological image;\r\n- An audio or video recording of an interview;\r\n- Scanned pathology slide;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of paper documentation or hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.\r\n\r\nIf more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.\r\n\r\nIf a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group.",
-          "misuse" : "Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.\r\n\r\nNot to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-media_file-004.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "defaultValue" : {
-                "value" : "Imported RCHPH results",
-                "@type" : "DV_TEXT"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0010.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "defaultValue" : {
-                "@type" : "DV_IDENTIFIER"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Calculation results",
-            "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "*Media file (en) (2)",
-            "description" : "*A media file that is acquired or used as part of the healthcare process, and associated metadata. (en)"
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Mediendatei (2)",
-            "description" : "Eine Mediendatei mit zugehörigen Metadaten, die im Rahmen des Gesundheitsprozesses erworben oder verwendet wird."
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Mediafil (2)",
-            "description" : "En mediafil, samt tilknyttede metadata, som er ervervet eller brukt forbindelse med en helsetjeneste."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "2f03659f-7d8f-4bd3-8b83-c49a783b085d",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Natalia Strauch",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "Strauch.Natalia@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Åsa Skagerhult, Erik Sundvall",
-        "organisation" : "Region Östergötland",
-        "email" : "asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Liv Laugen, John Tore Valand",
-        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen",
-        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no"
-      },
-      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -5861,20 +4899,6 @@
             "code" : "ac0.2",
             "description" : ""
           },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Gestational age",
-            "description" : "The length of the pregnancy at the time of delivery of the infant.",
-            "comment" : "The value for this data element will usually, but not always, be identical to the 'Pregnancy duration' data element within the EVALUATION.pregnancy_summary in the maternal record. It may also be derived using the 'Agreed date' data element within the EVALUATION.estimated_date_delivery archetype in the maternal record. Usually estimated by Naegele's rule or by ultrasound scan."
-          },
-          "at0018" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0018",
-            "text" : "Gestational maturity",
-            "description" : "The postnatal gestation estimated by physical examination and/or neuromuscular assessment of newborn.",
-            "comment" : "Usually estimated by physical examination and/or neuromuscular assessment of the newborn."
-          },
           "at0018.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0018",
@@ -6088,24 +5112,6 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
-              "nodeId" : "at0027.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0014.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -6142,35 +5148,7 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : {
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Kjønn tildelt ved fødsel",
-            "description" : "Kjønnet til et individ, bestemt på bakgrunn av anatomiske karakteristika og registrert ved fødsel.",
-            "comment" : "For eksempel: 'Mann', 'Kvinne', 'Intersex'. Koding med en terminologi er anbefalt, der det er mulig. Bruk elementet \"Kommentar\" eller SLOT'et \"Ytterligere detaljer\" dersom det er nødvendig å registrere mer spesifikke detaljer om individets kjønn."
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "Foretrukket pronomen",
-            "description" : "Pronomenet som individet ønsker å identifiseres med og brukt når andre snakker om individet.",
-            "comment" : "For eksempel \"hun/henne\", \"han/ham\" eller \"hen/hen\"."
-          },
           "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Kjønnskategori",
-            "description" : "Kategori som beskriver sammenhengen mellom et individs kjønnsidentitet med deres kjønn tildelt ved fødsel.",
-            "comment" : "For eksempel \"ciskjønnet\" eller \"transkjønnet\"."
-          },
-          "at0027.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027",
             "text" : "Kjønnskategori",
@@ -6193,28 +5171,7 @@
           }
         },
         "en" : {
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extension",
-            "description" : "Additional information required to capture local content or to align with other reference models/formalisms.",
-            "comment" : "For example: local information requirements or additional metadata to align with FHIR equivalents."
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "Preferred pronoun",
-            "description" : "The pronoun an individual chooses to identify with, and would prefer others to use when talking to or about that individual.",
-            "comment" : "For example: 'she/her'; 'he/him'; 'they/their'; or 'ze/zir'."
-          },
           "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Gender category",
-            "description" : "Category describing the alignment of an individual's gender identity with their sex assigned at birth.",
-            "comment" : "For example: cisgender; transgender."
-          },
-          "at0027.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027",
             "text" : "Gender category",
@@ -6230,48 +5187,6 @@
           }
         },
         "de" : {
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Geschlechtsidentität",
-            "description" : "Die persönliche Wahrnehmung des eigenen Geschlechts.",
-            "comment" : "Zum Beispiel: \"Frau\", \"Mann\" oder \"nicht-binär\". Die Codierung mit einer Terminologie wird, wenn möglich, empfohlen."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen, die erforderlich sind, um lokale Inhalte zu erfassen oder mit anderen Referenzmodellen/Formalismen abzugleichen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Äquivalente."
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Geschlechtszuweisung bei der Geburt",
-            "description" : "Das Geschlecht einer Person, bestimmt durch anatomische Merkmale, welches bei der Geburt festgestellt und eingetragen wurden.",
-            "comment" : "Zum Beispiel: \"Männlich\", \"Weiblich\", \"Intersexuell\". Die Kodierung mit einer Terminologie wird empfohlen, wenn möglich. Falls notwendig, benutzen Sie das Element \"Kommentar\" oder den SLOT \"Zusätzliche Details\" um genauere Angaben zum Geschlecht der Person zu machen."
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "Bevorzugtes Pronomen",
-            "description" : "Das Pronomen, mit dem sich eine Person identifiziert, und welches die Person bevorzugen würde, wenn andere mit oder über diese Person sprechen.",
-            "comment" : "Zum Beispiel: „sie/ihr“, \"er/ihm\" oder \"sie/ihre\"."
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Administratives Geschlecht",
-            "description" : "Das Geschlecht einer Person, das für administrative Zwecke verwendet wird.",
-            "comment" : "Dieses Element beschreibt das, was die meisten Systeme heutzutage als \"Geschlecht\" (vgl. engl.: \"Sex\" oder \"Gender\") bezeichnen. Zum Beispiel \"Männlich\", \"Weiblich\", \"Divers\". Dieser Archetyp entspricht dem HL7 FHIR Element \"Person.gender\"'. Die Codierung mit einer Terminologie wird empfohlen, wenn möglich."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Ausdruck des Geschlechts",
-            "description" : "Der Ausdruck des Geschlechts durch das Individuum in Form von Verhalten, Sprache, Kleidung oder anderen äußeren Merkmalen.",
-            "comment" : "Zum Beispiel \"männlich\", \"weiblich\", \"androgyn\" oder \"abwechselnd\". Alternativ, eine Beschreibung."
-          },
           "at0027" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027",
@@ -6285,13 +5200,6 @@
             "text" : "Ausdruck des Geschlechts",
             "description" : "Der Ausdruck des Geschlechts durch das Individuum in Form von Verhalten, Sprache, Kleidung oder anderen äußeren Merkmalen.",
             "comment" : "Zum Beispiel \"männlich\", \"weiblich\", \"androgyn\" oder \"abwechselnd\". Alternativ, eine Beschreibung."
-          },
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Geschlechterkategorie",
-            "description" : "Kategorie, die die Übereinstimmung der Geschlechtsidentität einer Person mit ihrem bei der Geburt zugewiesenen Geschlecht beschreibt.",
-            "comment" : "Zum Beispiel: Cisgender, Transgender."
           },
           "at0019.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -6323,28 +5231,7 @@
           }
         },
         "sv" : {
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilläggsinformation",
-            "description" : "Plats för att infoga tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.",
-            "comment" : "*For example: local information requirements or additional metadata to align with FHIR equivalents. (en)"
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "Föredraget pronomen",
-            "description" : "Det pronomen som individen väljer att identifiera sig med och föredrar att andra använder när de pratar med eller om personen i fråga.",
-            "comment" : "*For example: 'she/her'; 'he/him'; 'they/their'; or 'ze/zir'. (en)"
-          },
           "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "*Gender category (en)",
-            "description" : "*Category describing the alignment of an individual's gender identity with their sex assigned at birth. (en)",
-            "comment" : "*For example: cisgender; transgender. (en)"
-          },
-          "at0027.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027",
             "text" : "*Gender category (en)",
@@ -6360,74 +5247,6 @@
           }
         },
         "pt-pt" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Gender(en)",
-            "description" : "*Details about the gender of an individual.(en)"
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Gender identity(en)",
-            "description" : "*The individual's perception of their own gender.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Last updated(en)",
-            "description" : "*The date this gender data was last updated.(en)"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "*Extension(en)",
-            "description" : "*Additional information required to capture local content or to align with other reference models/formalisms.(en)",
-            "comment" : "*For example: local information requirements or additional metadata to align with FHIR equivalents. (en)"
-          },
-          "at0014" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0014",
-            "text" : "*Comment(en)",
-            "description" : "*Additional narrative about the individual's gender not captured in other data elements.(en)"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "*Sex assigned at birth(en)",
-            "description" : "*The sex of an individual determined by anatomical characteristics observed and registered at birth.(en)"
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "*Preferred pronoun(en)",
-            "description" : "*The pronoun an individual chooses to identify with, and would prefer others to use when talking to or about that individual.(en)",
-            "comment" : "*For example: 'she/her'; 'he/him'; 'they/their'; or 'ze/zir'. (en)"
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "*Administrative gender(en)",
-            "description" : "*The gender of an individual used for administrative purposes.(en)"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "*Additional details(en)",
-            "description" : "*Additional structured details about the individuals gender.(en)"
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "*Gender expression(en)",
-            "description" : "*The expression of the gender by the individual as demonstrated by behaviour, speech, clothes or other external characteristics.(en)"
-          },
-          "at0026" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026",
-            "text" : "*Legal gender(en)",
-            "description" : "*The gender of an individual used for official or legal purposes.(en)"
-          },
           "at0027" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0027",
@@ -6445,12 +5264,6 @@
             "code" : "at0014",
             "text" : "*Comment(en)",
             "description" : "*Additional narrative about the individual's gender not captured in other data elements.(en)"
-          },
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "*Gender category(en)",
-            "description" : "*Category describing the alignment of an individual's gender identity with their sex assigned at birth.(en)"
           },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -6558,6 +5371,260 @@
       "author" : { },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "2791e158-3753-400a-b7c6-11a1ce2cf1e6",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "62a38e9931bb064eabe90793b1b13ad8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.child_growth_indicator_details.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "92c56274-e98b-4dc8-a612-3913118f3550",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "aaf24f80-3e2b-4edb-88a8-6d7f0a8d93f2",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "62a38e9931bb064eabe90793b1b13ad8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.child_growth_indicator_details.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0002", "at0004" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0002" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "92c56274-e98b-4dc8-a612-3913118f3550",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b04a42c0-8fca-4bb9-a8f4-df06700fc4a6",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "62a38e9931bb064eabe90793b1b13ad8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.child_growth_indicator_details.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-003.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "92c56274-e98b-4dc8-a612-3913118f3550",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "4af91ef1-76c1-471e-9f8c-345b3228f8d0",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "62a38e9931bb064eabe90793b1b13ad8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.child_growth_indicator_details.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-child_growth_indicator_details-004.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "92c56274-e98b-4dc8-a612-3913118f3550",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
