@@ -19,7 +19,7 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To support additional information capture when generating child growth charts. ">
-			keywords = <"Royal College of Paediatrics and Child Health, RCPCH", ...>
+			keywords = <"Royal College of Paediatrics and Child Health, RCPCH, growth chart,", ...>
 		>
 	>
 	other_details = <
@@ -28,7 +28,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"75a6a62f0824a6b634ca0991114d1e78">
+		["MD5-CAM-1.0.1"] = <"7e5abc65754c22f47660f02723ebc8ef">
 		["build_uid"] = <"92c56274-e98b-4dc8-a612-3913118f3550">
 	>
 
@@ -56,7 +56,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"child_growth_indicator_details">
-					description = <"To allow for the capture of additional information as part of a child growth indicator calculation, e.g. the RCPCH digital growth chart.">
+					description = <"To allow for the capture of additional information as part of a child growth indicator calculation, e.g. a reference type in the RCPCH digital growth chart to indicate this is for Turner's Syndrome.">
 				>
 				["at0001"] = <
 					text = <"Calculation reference">
