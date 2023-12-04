@@ -28,12 +28,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"07b320a30817d91a15e9f811b2a5075e">
+		["MD5-CAM-1.0.1"] = <"66f430b12032d3cae189660005d90faa">
 		["build_uid"] = <"92c56274-e98b-4dc8-a612-3913118f3550">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Child growth indicator reference
+	CLUSTER[at0000] matches {    -- Child growth indicator details
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Calculation reference
 				value matches {
@@ -55,7 +55,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Child growth indicator reference">
+					text = <"Child growth indicator details">
 					description = <"To allow for the capture of additional information as part of a child growth indicator calculation, e.g. the RCPCH digital growth chart.">
 				>
 				["at0001"] = <
