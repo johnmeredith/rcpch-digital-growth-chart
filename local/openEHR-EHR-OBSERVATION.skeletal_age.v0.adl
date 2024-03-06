@@ -55,13 +55,13 @@ Manzoor Mughal, A., Hassan, N., & Ahmed, A. (2014). Bone Age Assessment Methods:
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"Apperta UK">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"635fcb600987fa637c9ec8fbef5d80a9">
+		["MD5-CAM-1.0.1"] = <"480eba6e0aba1019dac2ef46d826c3f8">
 		["build_uid"] = <"747dc6ae-d814-47bc-90fc-cbd196bc9c04">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- skeletal_age
+	OBSERVATION[at0000] matches {    -- Skeletal age
 		data matches {
 			HISTORY[at0001] matches {    -- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -199,7 +199,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"skeletal_age">
+					text = <"Skeletal age">
 					description = <"An estimate of biological age by assessing the degree of maturation of an individual's bones.
 
 Specialised for use with the RCPCH in the UK to include additional elements.">
@@ -320,7 +320,7 @@ Specialised for use with the RCPCH in the UK to include additional elements.">
 		["nb"] = <
 			items = <
 				["at0000"] = <
-					text = <"skeletal_age">
+					text = <"*Skeletal age (en)">
 					description = <"*An estimate of biological age by assessing the degree of maturation of an individual's bones.
 
 Specialised for use with the RCPCH in the UK to include additional elements. (en)">
