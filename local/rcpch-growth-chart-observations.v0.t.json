@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.7",
+      "sem_ver" : "0.1.8",
       "build_uid" : "d27ecf19-ef5d-4cb8-95ea-ca733c1bf485",
-      "MD5-CAM-1.0.1" : "a11032790166a04e24cf9a2f24325ddd",
+      "MD5-CAM-1.0.1" : "83f406a03f0a58a1824f156b537b7bc4",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -716,7 +716,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "b9551e5e06db284ba5276dda5ebe9189",
-        "PARENT:MD5-CAM-1.0.1" : "3B42BB91BE754B59230551D64B998DAD"
+        "PARENT:MD5-CAM-1.0.1" : "2691dfa874f5f02a780b9b07ad9265c8"
       },
       "details" : {
         "nb" : {
@@ -1467,7 +1467,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "cf953c025e637063ba6e8ac3d1fba9a6",
-        "PARENT:MD5-CAM-1.0.1" : "111A027E41E44BD9B3C9C014DB55D3FF"
+        "PARENT:MD5-CAM-1.0.1" : "BF9B28403CBB9F2FB9C120F3EB89DA8E"
       },
       "details" : {
         "de" : {
