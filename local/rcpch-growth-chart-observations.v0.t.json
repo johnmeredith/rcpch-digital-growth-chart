@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.2.1",
       "build_uid" : "d27ecf19-ef5d-4cb8-95ea-ca733c1bf485",
-      "MD5-CAM-1.0.1" : "e34ec030e178be702abe0907a324015a",
+      "MD5-CAM-1.0.1" : "b42c1424642ff1567bd08b861501c8a5",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -266,15 +266,6 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1",
         "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.21",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "Midparent height data",
-        "referenceType" : "templateId"
       } ]
     } ],
     "attributeTuples" : [ ]
