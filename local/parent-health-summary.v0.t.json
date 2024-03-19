@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.3",
+      "sem_ver" : "0.1.4",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "26059ab6ffe248ec9b6eca12cc66b7de",
+      "MD5-CAM-1.0.1" : "25b9a5e0a36f2a7ce47e57de92ee8a2a",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -227,7 +227,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "E62D896E2577FA727C75A9EFFD7CA63E"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -621,7 +637,8 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
@@ -1357,7 +1374,8 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
