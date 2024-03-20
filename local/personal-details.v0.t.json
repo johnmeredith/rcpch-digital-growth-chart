@@ -22,10 +22,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.1",
+      "sem_ver" : "0.2.0",
       "is_singleton" : "ehr",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e95a13ecd486439c4fb9b476ca0b7388",
+      "MD5-CAM-1.0.1" : "a7a15db1662d2295f705eb8a106e7a86",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -228,7 +228,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "E62D896E2577FA727C75A9EFFD7CA63E"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -246,7 +262,6 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0001.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -313,7 +328,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0007.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -399,7 +413,85 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "BF9B28403CBB9F2FB9C120F3EB89DA8E"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung des Geschlechts einer Person.",
+          "keywords" : [ "Geschlecht", "männlich", "weiblich", "divers", "androgyn", "Junge", "Mädchen", "Mann", "Frau", "Transsexuelle", "Bigender", "geschlechtslos", "agender", "transgeschlechtlich", "Transgender", "Transfrau", "Transmann" ],
+          "use" : "Der Archetyp wird verwendet, um Details über das Geschlecht der Person darzustellen, einschließlich des administrativen, rechtlichen und bei der Geburt zugewiesenen Geschlechts, zusätzlich der Geschlechtsidentität, des Ausdrucks des Geschlechts und des bevorzugten Pronomen.\r\n\r\nDas Ziel dieses Archetyps ist es, Details, die mit dem Geschlecht einer Person verbunden sind, zu erfassen. Aufgrund des modernen Gender-Denkens sowie neuer Erkenntnisse über psychologische, biologische und soziale Manifestationen von Geschlecht ergibt sich ein breiteres Spektrum an Beschreibungen.\r\n\r\nDieser Archetyp ermöglicht auch die Erfassung und Unterscheidung von rechtlichem und administrativem Geschlecht.\r\n\r\nIn den meisten Anwendungsfällen wird das „Administrative Geschlecht“ als Äquivalent zur traditionellen Definition von „Geschlecht“ in aktuellen oder älteren Systemen verwendet.",
+          "misuse" : "Nicht zur Darstellung von Informationen über die sexuelle Orientierung oder Ausübung einer Person verwenden.\r\n\r\nNicht für die Darstellung des genetischen oder chromosomalen Geschlechts verwenden. Derzeit wird dies in der Regel als Laborergebnis erfasst. Die formale Darstellung des „Genetischen Geschlechts“ ist noch nicht genau definiert und kann die Kombination von Informationsachsen umfassen, einschließlich Chromosomen- und Rezeptordaten, Mosaikvarianten und Diagnosen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "purpose" : "Para registar detalhes sobre o género de um indivíduo",
+          "keywords" : [ ],
+          "use" : "*Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems. (en)",
+          "misuse" : "*Not to be used for recording information relating to the sexual orientation or sexual activity of an individual.\r\n\r\nNot to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en individs kön.",
+          "keywords" : [ "kön", "manligt", "kvinnligt", "androgyn", "pojke", "flicka", "man", "kvinna", "transsexuell", "bigender", "agender", "transpersoner", "transman", "transkvinna" ],
+          "use" : "*Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems. (en)",
+          "misuse" : "Ska inte användas för att registrera information som berör en individs sexuella läggning eller sexuella aktivitet.\r\n\r\nSka inte användas för registrering av genetiskt eller kromosomalt kön. För närvarande registreras detta vanligtvis via ett laboratorietest. Formell representation av \"genetiskt kön\" är inte definierat och kan involvera en kombination av flera olika parametrar inklusive data från receptorer, kromosomer, mosaicism och diagnoser.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere individets kjønn.",
+          "keywords" : [ "kjønn", "mann", "kvinne", "androgyn", "gutt", "jente", "pike", "trans", "transmann", "transkvinne", "transseksuell" ],
+          "use" : "Brukes for å angi individets kjønn, inkludert administrativt, juridisk, og anatomisk kjønn. I tillegg kjønnsidentitet, fremtoning og foretrukne pronomen.\r\n\r\nAmbisjonen til denne arketypen er å gjøre det mulig å registrere et bredere spekter av detaljer som er knyttet til kjønnet til et individ, som gjenspeiler moderne tenkning om kjønn så vel som ny kunnskap om hvordan kjønn manifesterer seg psykologisk, biologisk og sosialt.\r\n\r\nI Norge er det niende sifferet i fødselsnummeret en markering på kjønn. De fleste systemer i Norge benytter dette til å utlede individets kjønn. Med denne arketypen kan man skille mellom det juridiske kjønnet, slik det fremkommer i fødselsnummeret og det kjønnet man administrativt vil tilordne et individ, for eksempel for praktiske formål som å planlegge hvilket rom et individ skal legges på. Det er opp til leverandørene og implementasjon om man som utgangspunkt skal benytte \"Administrativt kjønn\" eller \"Juridisk kjønn\", eller om man vil sette verdien i disse to elementene likt og åpne for å kunne endre manuelt i de tilfellene man trenger det. Eksempel på dette siste er om juridisk kjønn ikke er oppdatert i henhold til hvordan et individ fremstår.\r\n\r\nDenne arketypen kan på et senere utvides til å inneholde informasjon om kjønn som ennå ikke er vanlig brukt, eller dette kan legges inn i SLOT'et \"Ytterligere detaljer\".",
+          "misuse" : "Skal ikke brukes til å registrere informasjon relatert til seksuell orientering eller adferd.\r\n\r\nSkal ikke brukes til å registrere genetisk kjønn. Per i dag registeres dette som regel som en diagnose eller et laboratoriesvar. Verdisett for et dataelement som \"Genetisk kjønn\" er heller ennå ikke godt definert, og kan bestå av kombinasjoner av forskjellige akser, inkludert data knyttet til kromosomer og reseptorkjønn, mosaikktilstander og diagnoser.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about the gender of an individual.",
+          "keywords" : [ "sex", "male", "female", "androgynous", "boy", "girl", "man", "woman", "transsexual", "bigender", "agender", "transgender", "transman", "transwoman" ],
+          "use" : "Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems.",
+          "misuse" : "Not to be used for recording information relating to the sexual orientation or sexual activity of an individual.\r\n\r\nNot to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.gender.v1",
     "differential" : true,
