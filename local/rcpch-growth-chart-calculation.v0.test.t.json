@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "0.3.3",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "6614f501a6c007849989851e727a2966",
+      "MD5-CAM-1.0.1" : "a4c76dbbc7026415002fb38ca0b50bba",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959"
     },
     "details" : {
@@ -296,7 +296,34 @@
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
-    "attributeTuples" : [ ]
+    "attributeTuples" : [ ],
+    "attributeCustomizations" : {
+      "feeder_audit" : {
+        "aliases" : {
+          "en" : "feeder_audit"
+        }
+      },
+      "composer" : {
+        "aliases" : {
+          "en" : "composer"
+        }
+      },
+      "category" : {
+        "aliases" : {
+          "en" : "category"
+        }
+      },
+      "territory" : {
+        "aliases" : {
+          "en" : "territory"
+        }
+      },
+      "language" : {
+        "aliases" : {
+          "en" : "language"
+        }
+      }
+    }
   },
   "terminology" : {
     "@type" : "ARCHETYPE_TERMINOLOGY",
