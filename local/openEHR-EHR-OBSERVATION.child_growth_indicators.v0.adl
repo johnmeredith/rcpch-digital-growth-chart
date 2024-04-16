@@ -61,13 +61,13 @@ World Health Organiation [Internet]. Geneva: World Health Organization.The WHO C
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"aa96c5b872728cf4400d9a6b7838227c">
+		["MD5-CAM-1.0.1"] = <"981d9aa2ef4dd2cc6b70d03629bc5e4c">
 		["build_uid"] = <"6cfa0c11-888c-48d7-a2f8-d9072d3b646b">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Child growth indicators
+	OBSERVATION[at0000] matches {    -- Child growth indicator
 		data matches {
 			HISTORY[at0001] matches {    -- Event Series
 				events cardinality matches {1..*; unordered} matches {
@@ -163,7 +163,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Child growth indicators">
+					text = <"Child growth indicator">
 					description = <"Details about parameters plotted on a growth chart to allow monitoring of a child's growth over time, relative to a reference population.">
 				>
 				["at0001"] = <
@@ -274,10 +274,10 @@ ontology
 				>
 				["at0042"] = <
 					text = <"Indicator calculation reference">
-					description = <"Specifies the growth standard or syndrome-specific growth chart applicable to the child's growth data being recorded. This allows for the alignment of growth measurements with the appropriate growth standards, ensuring more accurate assessment and monitoring.">
-					comment = <"This element indicates the specific growth chart standard or calculation used for the evaluation of the child’s growth data. For example, for a typical height assessment, 'WHO' might be used, whereas for children diagnosed with Turner Syndrome, the 'Turner' standard would be applicable. 
+					description = <"Specifies the standard or syndrome-specific calculation applicable to the growth indicator data being recorded. ">
+					comment = <"For example, for a typical height assessment, 'WHO' might be used, whereas for children diagnosed with Turner Syndrome, the 'Turner' standard would be applicable. 
 
-Please see the RCPCH API as an example (https://growth.rcpch.ac.uk/integrator/api-reference/).
+Please see the Royal College of Paediatrics and Child Health API as an example (https://growth.rcpch.ac.uk/).
 ">
 				>
 			>
@@ -285,7 +285,7 @@ Please see the RCPCH API as an example (https://growth.rcpch.ac.uk/integrator/ap
 		["sl"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Child growth indicators (en)">
+					text = <"*Child growth indicator (en)">
 					description = <"*Details about parameters plotted on a growth chart to allow monitoring of a child's growth over time, relative to a reference population.(en)">
 				>
 				["at0001"] = <
@@ -396,10 +396,10 @@ Please see the RCPCH API as an example (https://growth.rcpch.ac.uk/integrator/ap
 				>
 				["at0042"] = <
 					text = <"*Indicator calculation reference (en)">
-					description = <"*Specifies the growth standard or syndrome-specific growth chart applicable to the child's growth data being recorded. This allows for the alignment of growth measurements with the appropriate growth standards, ensuring more accurate assessment and monitoring. (en)">
-					comment = <"*This element indicates the specific growth chart standard or calculation used for the evaluation of the child’s growth data. For example, for a typical height assessment, 'WHO' might be used, whereas for children diagnosed with Turner Syndrome, the 'Turner' standard would be applicable. 
+					description = <"*Specifies the standard or syndrome-specific calculation applicable to the growth indicator data being recorded.  (en)">
+					comment = <"*For example, for a typical height assessment, 'WHO' might be used, whereas for children diagnosed with Turner Syndrome, the 'Turner' standard would be applicable. 
 
-Please see the RCPCH API as an example (https://growth.rcpch.ac.uk/integrator/api-reference/).
+Please see the Royal College of Paediatrics and Child Health API as an example (https://growth.rcpch.ac.uk/).
  (en)">
 				>
 			>
