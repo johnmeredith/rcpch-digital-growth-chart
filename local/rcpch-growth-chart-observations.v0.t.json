@@ -22,10 +22,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.3",
+      "sem_ver" : "0.3.0",
       "build_uid" : "d27ecf19-ef5d-4cb8-95ea-ca733c1bf485",
-      "MD5-CAM-1.0.1" : "8f40d185351bb4d505378a8882a5b0f5",
-      "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
+      "MD5-CAM-1.0.1" : "bfd222a437e4662e7562107eaf847c5d",
+      "PARENT:MD5-CAM-1.0.1" : "327A8885F97587660404644C3C6053B6"
     },
     "details" : {
       "de" : {
@@ -184,6 +184,21 @@
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
+      },
+      "pt-pt" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-pt"
+        },
+        "purpose" : "Registar os dados documentais de uma única interação, contacto ou evento de prestação de cuidados entre uma pessoa sujeita a cuidados e o(s) prestador(es) de cuidados de saúde para a prestação de serviços de saúde. Pode tratar-se de uma interação presencial ou à distância.",
+        "keywords" : [ "encontro", "contato", "visita", "evento de cuidados" ],
+        "use" : "Utilizar como um container genérico a nível documental para registar os pormenores de uma única interação, contacto ou evento de cuidados entre uma pessoa que recebe cuidados e o(s) prestador(es) de cuidados de saúde.\r\nO contacto pode ser presencial, telefónico ou por outro meio eletrónico. A modalidade pode ser registada, se necessário, através do atributo COMPOSITION/mode do modelo de referência.\r\n\r\nO componente principal Secções/Conteúdo foi deliberadamente deixado sem restrições. Isto permite-lhe ser preenchido com quaisquer arquétipos SECTION ou ENTRY apropriados para o objetivo clínico dentro de um modelo.\r\n\r\nApesar de não ser restrito para o conteúdo clínico, a especificação de COMPOSITION.Encounter fornece um valor significativo ao permitir a consulta explícita de todos os Encounters num registo de doente.\r\n\r\nO componente Context (Contexto) contém um SLOT opcional \"Extension\" (Extensão) que pode ser utilizado na conceção do modelo para\r\n- adicionar informações contextuais opcionais, tais como informações sobre episódios; ou\r\n- permitir a harmonização ou o alinhamento com outros formalismos de modelos, como o FHIR ou o CIMI, como a representação explícita de participantes que são normalmente geridos pelo modelo de referência openEHR num arquétipo openEHR.\r\n\r\nExemplos típicos são uma visita clínica, uma observação de enfermagem ou uma consulta de telemedicina.",
+        "misuse" : "Não deve ser utilizado para registar pormenores sobre um episódio completo de cuidados de saúde.\r\n\r\nNão deve ser utilizado para registar informações persistentes e resumidas sobre o doente, como uma lista de problemas ou um resumo da medicação.\r\n\r\nNão deve ser utilizado para representar o relatório de um serviço de diagnóstico, como um exame imagiológico ou laboratorial.\r\n\r\nNão deve ser utilizado para representar o recurso FHIR com o mesmo nome - existe uma incompatibilidade entre o âmbito e a intenção.\r\n",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
       }
     }
   },
@@ -240,15 +255,6 @@
         "unique" : false
       },
       "children" : [ {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.35",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-child_growth-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..1",
@@ -377,7 +383,8 @@
           "text" : "RCPCH Growth Chart Observations",
           "description" : "Interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell."
         }
-      }
+      },
+      "pt-pt" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -3759,324 +3766,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "131663bf-f33c-4158-bbd2-4f62e4a4390e",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "D95F81C9ECC1E4AACABD37C3B1E651EA"
-      },
-      "details" : {
-        "sl" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sl"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : {
-            "notes" : "Generated automatically by Adl Designer"
-          }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about parameters plotted as percentiles on a growth chart.",
-          "keywords" : [ "growth", "calculation", "centile", "percentile", "z-score", "SD", "height", "weight", "head cicrumference" ],
-          "use" : "Use to record details about parameters plotted as percentiles on a growth chart.\r\n\r\nUse the URI to explicitly link the original measurement as recorded.\r\n\r\nUse in a template alongside OBSERVATION.age to record the adjusted age of an infant as part of monitoring child growth patterns.",
-          "misuse" : "Not to be used to record actual measurements. Use appropriate OBSERVATION archetypes for this purpose - for example OBSERVATION.height, OBSERVATION.weight, OBSERVATION.head_circumference, OBSERVATION.body_segment or OBSERVATION.blood_pressure.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.child_growth.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-child_growth-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "HISTORY",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "events",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0014.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.4" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0035.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0010.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_PROPORTION",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "numerator",
-                            "children" : [ {
-                              "@type" : "C_REAL",
-                              "rmTypeName" : "REAL",
-                              "occurrences" : "1..1",
-                              "constraint" : [ {
-                                "lower" : 0.0,
-                                "upper" : 100.0,
-                                "lowerIncluded" : true,
-                                "upperIncluded" : true,
-                                "lowerUnbounded" : false,
-                                "upperUnbounded" : false
-                              } ]
-                            } ]
-                          }, {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "type",
-                            "children" : [ {
-                              "@type" : "C_INTEGER",
-                              "rmTypeName" : "INTEGER",
-                              "occurrences" : "1..1",
-                              "constraint" : [ {
-                                "lower" : 2,
-                                "upper" : 2,
-                                "lowerIncluded" : true,
-                                "upperIncluded" : true,
-                                "lowerUnbounded" : false,
-                                "upperUnbounded" : false
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0011.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_QUANTITY",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "property",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "openehr"
-                              },
-                              "constraint" : [ "380" ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ {
-                            "@type" : "C_ATTRIBUTE_TUPLE",
-                            "members" : [ {
-                              "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "units",
-                              "children" : [ ]
-                            }, {
-                              "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "magnitude",
-                              "children" : [ ]
-                            } ],
-                            "tuples" : [ {
-                              "@type" : "C_PRIMITIVE_TUPLE",
-                              "members" : [ {
-                                "@type" : "C_STRING",
-                                "rmTypeName" : "STRING",
-                                "constraint" : [ "1" ]
-                              }, {
-                                "@type" : "C_REAL",
-                                "rmTypeName" : "REAL",
-                                "constraint" : [ {
-                                  "lowerIncluded" : false,
-                                  "upperIncluded" : false,
-                                  "lowerUnbounded" : true,
-                                  "upperUnbounded" : true
-                                } ]
-                              } ]
-                            } ]
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0041.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0019.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.4",
-            "description" : ""
-          }
-        },
-        "sl" : {
-          "ac0.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0020" ]
-        },
-        "ac0.2" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.2",
-          "members" : [ "at0020", "at0023" ]
-        },
-        "ac0.3" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.3",
-          "members" : [ "at0020", "at0023", "at0029" ]
-        },
-        "ac0.4" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.4",
-          "members" : [ "at0020", "at0023", "at0029", "at0024" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "6cfa0c11-888c-48d7-a2f8-d9072d3b646b",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : {
-        "application" : "Adl Designer"
-      },
-      "otherDetails" : {
-        "notes" : "Generated automatically by Adl Designer"
-      }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "26b3ecc7-f89f-4ea2-99af-59b475a41c30",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -4710,6 +4399,19 @@
       "codeString" : "nl"
     },
     "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-pt"
+    },
+    "author" : {
+      "name" : "Diana Ferreira",
+      "email" : "dianaferreira_16@hotmail.com"
+    },
     "otherDetails" : { }
   } ]
 }
