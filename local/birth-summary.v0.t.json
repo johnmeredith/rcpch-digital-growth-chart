@@ -18,11 +18,11 @@
     "conversionDetails" : { },
     "otherDetails" : {
       "licence" : "",
-      "custodian_organisation" : "",
-      "original_namespace" : "",
-      "original_publisher" : "",
+      "custodian_organisation" : "Digital Health and Care Wales",
+      "original_namespace" : "wales.nhs.uk",
+      "original_publisher" : "Digital Health and Care Wales",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.5",
+      "sem_ver" : "0.1.6",
       "build_uid" : "879e5bd2-4e69-4fbd-beb8-dd00952f7ceb",
       "MD5-CAM-1.0.1" : "08e290adc925a4ae384eba8c5ba97ab7",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
