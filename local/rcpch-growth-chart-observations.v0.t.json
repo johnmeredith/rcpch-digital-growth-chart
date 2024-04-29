@@ -20,11 +20,11 @@
       "licence" : "",
       "custodian_organisation" : "",
       "original_namespace" : "",
-      "original_publisher" : "",
+      "original_publisher" : "Digital Health and Care Wales",
       "custodian_namespace" : "",
-      "sem_ver" : "0.3.1",
+      "sem_ver" : "0.3.2",
       "build_uid" : "d27ecf19-ef5d-4cb8-95ea-ca733c1bf485",
-      "MD5-CAM-1.0.1" : "a6bfe0f0c94dbf29689b7c55e7078c16",
+      "MD5-CAM-1.0.1" : "433be76c79904754daf7048626043fb7",
       "PARENT:MD5-CAM-1.0.1" : "327A8885F97587660404644C3C6053B6"
     },
     "details" : {
@@ -4295,7 +4295,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c424ad33528485e8e69102cdca5e0465"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.participations_dhcw.v1",
     "differential" : true,
@@ -4369,7 +4382,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "54DF385596D351E03EE2ED3C226D2834"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the recording of practitioner role details aligned with corresponding FHIR resource.",
+          "keywords" : [ ],
+          "use" : "Use to record practitioner role details aligned with the corresponding FHIR resources.\r\n\r\nThis cluster archetype is intended to be used inside FHIR resource aligned archetypes such as CLUSTER.fhir_practitioner.v0.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.practitioner_role_cc.v0",
     "differential" : true,
