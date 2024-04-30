@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "Digital Health and Care Wales",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.2",
+      "sem_ver" : "0.2.3",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "d2ba77ff0cfd69cf9d92bc5bfa15c474",
+      "MD5-CAM-1.0.1" : "dc7be2c6ffa19b76c6c40b7870c2ee19",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -261,7 +261,6 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0001.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
