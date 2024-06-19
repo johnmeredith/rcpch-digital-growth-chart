@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "Digital Health and Care Wales",
       "custodian_namespace" : "",
-      "sem_ver" : "0.3.2",
-      "build_uid" : "",
-      "MD5-CAM-1.0.1" : "bca284648917600cdf8d54f562a2f31a",
+      "sem_ver" : "0.3.3",
+      "build_uid" : "4992ccfc-13ad-4333-8324-8ebbf86cbbff",
+      "MD5-CAM-1.0.1" : "5825032f0eed4c21a8fc29be8f94e74c",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -72,8 +72,8 @@
           },
           "codeString" : "en"
         },
-        "purpose" : "For capturing data related to a child's parents.",
-        "keywords" : [ ],
+        "purpose" : "For capturing data related to a child's parents and other notable conditions relating to the calculation of child growth charts.",
+        "keywords" : [ "child, growth chart, maternal, paternal, parent, height" ],
         "use" : "For use in capturing health summary data relating to a child's parents as part of the child record. For example, containing information relating to parent height as part of growth chart calculations.",
         "misuse" : "Not for capturing data from the parents perspective, for example, labour or birth summaries. Please record that data within the relevant parent record.",
         "originalResourceUri" : { },
