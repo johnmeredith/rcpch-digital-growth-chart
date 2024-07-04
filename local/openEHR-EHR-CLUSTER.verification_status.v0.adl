@@ -10,6 +10,9 @@ language
 description
 	original_author = <
 		["date"] = <"2024-07-04">
+		["name"] = <"John Meredith">
+		["organisation"] = <"Digital Health and Care Wales">
+		["email"] = <"john.meredith@wales.nhs.uk">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -28,7 +31,7 @@ Not to be used as a replacement for status related data elements that are contai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6314dee4d738f6ea474bd2d3b0e960db">
+		["MD5-CAM-1.0.1"] = <"a9ef6ed419ecbe001edfd66ee891c63d">
 		["build_uid"] = <"60308e93-16b8-312c-ab6f-dbdbb28c5400">
 	>
 
@@ -37,11 +40,7 @@ definition
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Status
 				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[ac0000]
-						}
-					}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Comment
@@ -53,7 +52,6 @@ definition
 	}
 
 ontology
-	terminologies_available = <"Canonical Status Codes for FHIR Resources", ...>
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -63,19 +61,13 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Status">
-					description = <"">
+					description = <"A coded entry to support the status of a data point.">
+					comment = <"May be aligned to a standardised code system e.g. http://hl7.org/fhir/resource-status. ">
 				>
 				["at0002"] = <
 					text = <"Comment">
-					description = <"">
+					description = <"Additional comments associated with the status.">
 				>
-			>
-		>
-	>
-	constraint_binding = <
-		["Canonical Status Codes for FHIR Resources"] = <
-			items = <
-				["ac0000"] = <terminology://fhir.hl7.org/CodeSystem?url=http://hl7.org/fhir/resource-status>
 			>
 		>
 	>
